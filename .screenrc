@@ -1,0 +1,12 @@
+#change the hardstatus settings to give an window list at the bottom of the                                                                         
+##screen, with the time and date and with the current window highlighted                                                                             
+vbell off 
+defscrollback 1029
+hardstatus alwayslastline    
+
+term xterm 
+
+## man screen /color or /STRING ESCAPES   --- so the  first part     '%{ = rK}   contains the color (before the K
+hardstatus string '%{= wK}%-Lw%{= KW}%51>%n%f* %t%{= wK}%+Lw%< %{= kG}%-=' 
+
+
